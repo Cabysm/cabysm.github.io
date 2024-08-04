@@ -1,6 +1,6 @@
 title = "Cabysm"
 # The URL the site will be built for
-base_url = "cabysm.github.io"
+base_url = "https://cabysm.github.io/"
 
 
 # Whether to automatically compile all Sass files in the sass directory
