@@ -1,20 +1,84 @@
+title = "Cabysm"
 # The URL the site will be built for
 base_url = "cabysm.github.io"
 
-theme = "duckquill"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
+minify_html = true
+generate_feeds = true
+
 
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false
+feed_filenames = ["rss.xml", "atom.xml"]
+build_search_index = true
 
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = false
+highlight_code = true
+highlight_theme = "css"
+highlight_themes_css = [
+  { theme = "solarized-dark", filename = "syntax-theme-dark.css" },
+  { theme = "solarized-light", filename = "syntax-theme-light.css" },
+]
+smart_punctuation = true
+lazy_async_image = true
+bottom_footnotes = true
+
+[search]
+index_format = "elasticlunr_json"
 
 [extra]
 primary_color = "#3584e4"
 primary_color_alpha = "rgba(53, 132, 228, 0)"
+primary_color_dark = "#ffa348"
+primary_color_dark_alpha = "rgba(255, 163, 72, 0.2)"
 # Put all your custom variables here
+show_copy_button = true
+# Whether to show estimated read time in posts.
+# Calculated using the simple math: number of words ÷ words per minute.
+show_read_time = true
+# words_per_minute = "200"
+
+[extra.nav]
+# Whether to show Atom/RSS feed button in the nav
+show_feed = true
+# Links used in the nav.
+# For local files use same link format as in Markdown,
+# i.e "@/blog/_index.md".
+# See https://www.getzola.org/documentation/content/linking/#internal-links
+links = [
+]
+
+[extra.footer]
+# Links used in the footer.
+# Same as the nav ones.
+links = [
+
+  
+]
+# Social links in the footer.
+# Any URL-encoded SVG can be used as an icon.
+# https://simpleicons.org is recommended source of SVG icons.
+# For URL encoding https://yoksel.github.io/url-encoder/ can be used.
+socials = [
+ 
+]
+# Whether to show "© Title, YEAR"
+show_copyright = true
+# Whether to show "Powered by Zola and Duckquill"
+show_powered_by = true
+# Whether to show link to website source
+show_source = false
+# Custom copyright text
+# copyright = "© *Aperture* **Science** ~~Innovators~~, `1972`"
+
+# Based on https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/
+#
+# Mastodon-powered commenting.
+# Values can be overridden in front-matter, e.g.
+# for multi-author blogs or guest posts.
+#
+# These variables are also used for Mastodon verification,
+# the needed rel="me" link is set in the head based on these.
