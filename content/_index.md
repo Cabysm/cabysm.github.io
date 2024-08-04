@@ -8,10 +8,12 @@
 <pre>
 ❯ whoami
 Cabysm
+1
 
 ❯ ls ~/workspace
 <a href="https://github.com/Cabysm">GitHub</a>
 
 ❯ <span class="cursor">█</span>
+
 </pre>
 </div>
