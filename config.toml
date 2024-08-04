@@ -65,7 +65,7 @@ socials = [
  
 ]
 # Whether to show "© Title, YEAR"
-show_copyright = true
+show_copyright = false
 # Whether to show "Powered by Zola and Duckquill"
 show_powered_by = true
 # Whether to show link to website source
